@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 5850855460149240837}
   - component: {fileID: 6529768923248992116}
   - component: {fileID: 973989939228621449}
-  - component: {fileID: 3156830544453734107}
-  - component: {fileID: -8972808935264728349}
   - component: {fileID: -6318185609468283500}
-  m_Layer: 7
+  - component: {fileID: 3625947133722611681}
+  m_Layer: 0
   m_Name: enemy
   m_TagString: basicEnemy
   m_Icon: {fileID: 0}
@@ -170,7 +169,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 100000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -185,38 +184,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3156830544453734107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556570112408781885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7610055b23a3c6d4caa87b4082f7ab01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 973989939228621449}
-  target: {fileID: 0}
-  hitFrame: {fileID: 4052728822130427652}
-  deathAnim: {fileID: 7495770845989733696, guid: bab0711a9d81f584ab840c0602e5f779, type: 3}
-  healthBar: {fileID: 4566057905799246195}
-  pointDrop: {fileID: 3870887431790080150, guid: 7f0a9c18c25c1d54a82c8ccea438b8a1, type: 3}
---- !u!114 &-8972808935264728349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556570112408781885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 910eae97964268c4687843a094ed172a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: -6318185609468283500}
-  target: {fileID: 0}
 --- !u!195 &-6318185609468283500
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -239,6 +206,28 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3625947133722611681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556570112408781885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e932cb9ead553241bac189a6f27bc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: -6318185609468283500}
+  target: {fileID: 0}
+  hitFrame: {fileID: 8286019592076621488, guid: 298af3243cbb2494a9d773f701e77109, type: 3}
+  deathAnim: {fileID: 7495770845989733696, guid: bab0711a9d81f584ab840c0602e5f779, type: 3}
+  healthBar: {fileID: 4566057905799246195}
+  pointDrop: {fileID: 3870887431790080150, guid: 7f0a9c18c25c1d54a82c8ccea438b8a1, type: 3}
+  hp: 0
+  dmg: 0
+  lootDropAmount: 0
+  speed: 0
 --- !u!1 &856675193968966902
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596505239782362232}
   - component: {fileID: 297013797158500096}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: backHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8787315948192757042}
   - component: {fileID: 7278143288503108024}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FrontHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9114248682988597282}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8286019592076621488, guid: 298af3243cbb2494a9d773f701e77109, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8286019592076621488, guid: 298af3243cbb2494a9d773f701e77109, type: 3}
       propertyPath: m_IsActive
@@ -508,10 +497,5 @@ PrefabInstance:
 --- !u!4 &173180499696199026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5234510092084155590, guid: 298af3243cbb2494a9d773f701e77109, type: 3}
-  m_PrefabInstance: {fileID: 5387419572816392628}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4052728822130427652 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8286019592076621488, guid: 298af3243cbb2494a9d773f701e77109, type: 3}
   m_PrefabInstance: {fileID: 5387419572816392628}
   m_PrefabAsset: {fileID: 0}
