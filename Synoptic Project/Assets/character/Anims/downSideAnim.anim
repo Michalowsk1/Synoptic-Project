@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: down-leftWalkingAnim
+  m_Name: downSideAnim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1237778378, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
+      value: {fileID: 1221426832, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
     - time: 0.083333336
-      value: {fileID: 78191393, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
+      value: {fileID: -1748875353, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
     - time: 0.16666667
-      value: {fileID: 1386502546, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
+      value: {fileID: -808605207, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
     - time: 0.25
-      value: {fileID: 528268203, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
+      value: {fileID: 365641495, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1237778378, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
-    - {fileID: 78191393, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
-    - {fileID: 1386502546, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
-    - {fileID: 528268203, guid: 5e6cbd3da50eb994186654f2818dc8bf, type: 3}
+    - {fileID: 1221426832, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
+    - {fileID: -1748875353, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
+    - {fileID: -808605207, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
+    - {fileID: 365641495, guid: b0e9b082e40bc914d9071f48ba17824f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

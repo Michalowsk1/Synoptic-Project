@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9ec41f7245371b24f9973f832e7076f7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - upgrades: {fileID: 2055247227972791041, guid: e3d5ea1363a693642bcec12ee4867806, type: 3}
+  - abilities: {fileID: 8407442881127771407, guid: 4a88fe6d63fc9ac4fad6faef427cf4ba, type: 3}
+  - Shop: {fileID: 4522234902345228097, guid: 22ff29d9b6d56bd4eb23d37e19b95640, type: 3}
+  - ShopIcon: {fileID: 9063257051685758309, guid: 721acf670bf534d478d5cb911f13a88c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

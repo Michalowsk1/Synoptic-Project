@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
     public static float armour;
     public static float dmg;
     public static float hpRecover; // time taken to passively heal player
-    public static float bulletDamage;
     float damageTaken;
     float speed;
 
@@ -41,22 +40,27 @@ public class Player : MonoBehaviour
         Application.targetFrameRate = 60;
 
         rb.GetComponent<Rigidbody2D>();
+
+        crystalCount = 1000;
+
+        dmg = 1;
+        armour = 1;
+        hp = 10;
+        hpRecover = 20;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (ShopOpen.open == false)
-        //{
-        //    Controls();
-        //}
-        //else { }
-        dmg = 1;
-        Controls();
-        animations();
-        Combat();
-        Healing();
-        currency();
+        if (Buttons.open == false)
+        {
+            Controls();
+            animations();
+            Combat();
+            Healing();
+            currency();
+        }
+        else { }
     }
 
     void Controls()
@@ -167,13 +171,19 @@ private void OnCollisionEnter2D(Collision2D collision)
 
         else if (collision.gameObject.tag == "projectile")
         {
-            damageTaken = -2 + armour;
+            damageTaken = -3 + armour;
             if (damageTaken > 0) damageTaken = 0;
             hp += damageTaken;
         }
+
+        else if(collision.gameObject.tag == "redCurrency")
+        {
+            crystalCount++;
+            Destroy(collision.gameObject);
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+private void OnTriggerStay2D(Collider2D collision)
     {
         if ((collision.gameObject.tag == "heal"))
         {
