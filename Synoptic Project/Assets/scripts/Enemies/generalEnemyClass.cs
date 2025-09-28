@@ -26,7 +26,6 @@ public class generalEnemyClass : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.Find("/Player");
         hit = false;
         hitFrame.SetActive(false);
         agent.speed = speed;
@@ -51,6 +50,7 @@ public class generalEnemyClass : MonoBehaviour
 
     public void Combat()
     {
+        target = GameObject.Find("/Player");
         if (hit)
         {
             hp -= Player.dmg;

@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 3756493011045972366}
   - component: {fileID: 1784596018852080869}
   - component: {fileID: 156147859634019300}
-  - component: {fileID: 1176880507804266109}
   - component: {fileID: 8449159774988743739}
   - component: {fileID: 441402055441598635}
+  - component: {fileID: 7998604827733419097}
   m_Layer: 7
   m_Name: enemy 1
   m_TagString: flyingEnemy
@@ -185,7 +185,7 @@ Animator:
   m_GameObject: {fileID: 4492653198760047030}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb75e5c69b64435409d1f8f347abdedf, type: 2}
+  m_Controller: {fileID: 9100000, guid: b89b73a8ad3820349aae24a340437f24, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -218,25 +218,6 @@ NavMeshAgent:
   m_BaseOffset: 1.28
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1176880507804266109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492653198760047030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4750959fc5f5e54fab03d0dc1adc2ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 4492653198760047030}
-  healthBar: {fileID: 3034435385596075822}
-  death: {fileID: 603903829518449308, guid: b8c32731e42f5374a90e140651becfce, type: 3}
-  pointDrop: {fileID: 3870887431790080150, guid: 7f0a9c18c25c1d54a82c8ccea438b8a1, type: 3}
-  projectile: {fileID: 5949828514485309380, guid: 639cbaff2ceb78c459abec57177e910d, type: 3}
-  target: {fileID: 0}
-  agent: {fileID: 156147859634019300}
 --- !u!50 &8449159774988743739
 Rigidbody2D:
   serializedVersion: 4
@@ -249,7 +230,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -309,6 +290,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1979666, y: 1.4180787}
   m_EdgeRadius: 0
+--- !u!114 &7998604827733419097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492653198760047030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490c3576c602f984386074b7bd4a468b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 156147859634019300}
+  target: {fileID: 0}
+  hitFrame: {fileID: 6849086353868855226, guid: f7e1e78546e789c4c93ece82e39c0c9d, type: 3}
+  deathAnim: {fileID: 603903829518449308, guid: b8c32731e42f5374a90e140651becfce, type: 3}
+  healthBar: {fileID: 3034435385596075822}
+  pointDrop: {fileID: 3870887431790080150, guid: 7f0a9c18c25c1d54a82c8ccea438b8a1, type: 3}
+  hit: 0
+  hp: 0
+  dmg: 0
+  lootDropAmount: 0
+  speed: 0
+  projectile: {fileID: 5949828514485309380, guid: 639cbaff2ceb78c459abec57177e910d, type: 3}
 --- !u!1 &5987146488822198455
 GameObject:
   m_ObjectHideFlags: 0

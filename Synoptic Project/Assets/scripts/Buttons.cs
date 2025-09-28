@@ -21,7 +21,6 @@ public class Buttons : MonoBehaviour
         ShopIcon.SetActive(true);
         upgrades.SetActive(true);
         Shop.SetActive(false);
-        //abilities.SetActive(false);
 
 
     }

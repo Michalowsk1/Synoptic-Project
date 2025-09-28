@@ -58,9 +58,9 @@ public class Player : MonoBehaviour
             animations();
             Combat();
             Healing();
-            currency();
         }
         else { }
+        currency();
     }
 
     void Controls()
